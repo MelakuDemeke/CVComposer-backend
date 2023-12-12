@@ -30,6 +30,11 @@ app.use(express.json());
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/jobs", jobRoute);
 
+//Error handling middleware
+app.use((err, req, res, next) => {
+    return res.status(500).json("error from handler");
+});
+
 app.get("/", (req, res) => {
     res.send("Hello World");
 });
