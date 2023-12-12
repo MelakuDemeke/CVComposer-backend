@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import authRoute from "./routes/auth.js";
+import jobRoute from "./routes/jobs.js";
 
 const app = express();
 dotenv.config();
@@ -24,6 +25,7 @@ mongoose.connection.on("connected", () => {
 
 // middlewares
 app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/jobs", jobRoute);
 
 app.get("/", (req, res) => {
     res.send("Hello World");
