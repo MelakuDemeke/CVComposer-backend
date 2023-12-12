@@ -27,6 +27,16 @@ router.put("/:id", async (req, res) => {
     }
 });
 // TODO: DELETE JOB
+router.delete("/:id", async (req, res) => {
+    try {
+        await Job.findByIdAndDelete(
+            req.params.id,
+        );
+        res.status(200).json("Job has been deleted");
+    } catch (error) {
+        res.status(500).json(error);
+    }
+});
 // TODO: GET JOB
 // TODO: GETALL JOB
 
