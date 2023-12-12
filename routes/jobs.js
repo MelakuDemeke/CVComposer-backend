@@ -38,6 +38,16 @@ router.delete("/:id", async (req, res) => {
     }
 });
 // TODO: GET JOB
+router.get("/:id", async (req, res) => {
+    try {
+        const job = await Job.findById(
+            req.params.id,
+        );
+        res.status(200).json(job);
+    } catch (error) {
+        res.status(500).json(error);
+    }
+});
 // TODO: GETALL JOB
 
 export default router;
