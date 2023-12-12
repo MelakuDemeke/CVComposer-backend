@@ -14,6 +14,10 @@ const connect = async () => {
     }
 };
 
+mongoose.connection.on("disconnected", () => {
+    console.log("Database disconnected");
+});
+
 app.get("/", (req, res) => {
     res.send("Hello World");
 });
