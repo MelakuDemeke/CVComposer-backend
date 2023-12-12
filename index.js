@@ -32,7 +32,14 @@ app.use("/api/v1/jobs", jobRoute);
 
 //Error handling middleware
 app.use((err, req, res, next) => {
-    return res.status(500).json("error from handler");
+    const errorStatus = err.status || 500;
+    const errorMessage = err.message || "someting went wrong"
+    return res.status(errorStatus).json({
+        sucess: false,
+        status: errorStatus,
+        message: errorMessage,
+        stack: err.stack
+    });
 });
 
 app.get("/", (req, res) => {

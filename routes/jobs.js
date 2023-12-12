@@ -49,12 +49,12 @@ router.get("/:id", async (req, res) => {
     }
 });
 // TODO: GETALL JOB
-router.get("/", async (req, res) => {
+router.get("/", async (req, res, next) => {
     try {
-        const jobs = await Job.find();
+        const jobs = await Job.findById("fdfdefeffadfd");
         res.status(200).json(jobs);
     } catch (error) {
-        res.status(500).json(error);
+        next(error)
     }
 });
 
