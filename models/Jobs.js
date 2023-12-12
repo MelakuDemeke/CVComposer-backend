@@ -23,3 +23,5 @@ const jobSchema = new Schema({
     qualifications: [String],
     applicationDeadline: Date,
 });
+
+export default mongoose.model("Job", jobSchema);
