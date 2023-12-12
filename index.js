@@ -23,7 +23,10 @@ mongoose.connection.on("connected", () => {
     console.log("Database connected");
 });
 
-// middlewares
+// Express middleware
+app.use(express.json());
+
+//Personal middlewares
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/jobs", jobRoute);
 
