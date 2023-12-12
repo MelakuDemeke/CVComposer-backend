@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import authRoute from "./routes/auth.js";
 
 const app = express();
 dotenv.config();
@@ -20,6 +21,9 @@ mongoose.connection.on("disconnected", () => {
 mongoose.connection.on("connected", () => {
     console.log("Database connected");
 });
+
+// middlewares
+app.use("/api/v1/auth", authRoute);
 
 app.get("/", (req, res) => {
     res.send("Hello World");
