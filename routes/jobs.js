@@ -49,5 +49,13 @@ router.get("/:id", async (req, res) => {
     }
 });
 // TODO: GETALL JOB
+router.get("/", async (req, res) => {
+    try {
+        const jobs = await Job.find();
+        res.status(200).json(jobs);
+    } catch (error) {
+        res.status(500).json(error);
+    }
+});
 
 export default router;
