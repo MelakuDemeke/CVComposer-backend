@@ -14,6 +14,14 @@ router.post("/", async (req, res) => {
     }
 });
 // TODO: UPDATE JOB
+router.put("/:id", async (req, res) => {
+    try{
+        const updatedJob = await Job.findByIdAndUpdate(req.params.id, {$set: req.body});
+        res.status(200).json(updatedJob);
+    }catch(error){
+        res.status(500).json(error);
+    }
+});
 // TODO: DELETE JOB
 // TODO: GET JOB
 // TODO: GETALL JOB
