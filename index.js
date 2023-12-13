@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import authRoute from "./routes/auth.js";
 import jobRoute from "./routes/jobs.js";
 import cookieParser from "cookie-parser";
+import usersRoute from "./routes/users.js";
 
 const app = express();
 dotenv.config();
@@ -31,6 +32,7 @@ app.use(express.json());
 //Personal middlewares
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/jobs", jobRoute);
+app.use("/api/v1/users", usersRoute);
 
 
 //Error handling middleware
