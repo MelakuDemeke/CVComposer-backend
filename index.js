@@ -16,6 +16,11 @@ const connect = async () => {
         throw error;
     }
 };
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+    console.log('Connected to MongoDB');
+});
 
 mongoose.connection.on("disconnected", () => {
     console.log("Database disconnected");
@@ -48,7 +53,13 @@ app.use((err, req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-    res.send("Hello World");
+    if (mongoose.connection.readyState === 1) {
+        // Connection is open
+        res.send('Database connected!');
+    } else {
+        // Connection is not open
+        res.send('Error: Unable to connect to the database.');
+    }
 });
 
 app.listen(8800, () => {
