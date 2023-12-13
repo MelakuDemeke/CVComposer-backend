@@ -17,12 +17,12 @@ router.get("/checkadmin/:id", verifyAdmin, (req, res, next)=>{
 });
 
 //UPDATE User
-router.put("/:id", updateUser);
+router.put("/:id",verifyUser, updateUser);
 //DELETE User
-router.delete("/:id",deleteUser);
+router.delete("/:id",verifyUser, deleteUser);
 //GET User
-router.get("/:id", getUser);
+router.get("/:id",verifyUser, getUser);
 //GETALL User
-router.get("/", getUsers);
+router.get("/",verifyAdmin, getUsers);
 
 export default router;
