@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "a backend for cv composer",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
