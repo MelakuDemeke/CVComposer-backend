@@ -1,15 +1,16 @@
 import express from "express";
 import { createJob, deleteJob, getJob, getJobs, updateJob } from "../controllers/jobs.js";
+import { verifyAdmin } from "../utils/verifyToken.js";
 
 const router = express.Router();
 
 //CREATE JOB
-router.post("/", createJob);
+router.post("/",verifyAdmin, createJob);
 
 //UPDATE JOB
-router.put("/:id", updateJob);
+router.put("/:id",verifyAdmin, updateJob);
 //DELETE JOB
-router.delete("/:id",deleteJob);
+router.delete("/:id",verifyAdmin, deleteJob);
 //GET JOB
 router.get("/:id", getJob);
 //GETALL JOB
