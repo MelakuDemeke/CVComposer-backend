@@ -11,7 +11,7 @@ dotenv.config();
 
 const connect = async () => {
     try {
-        await mongoose.connect(process.env.MONGO);
+        await mongoose.connect(process.env.MONGODB_URI);
     } catch (error) {
         throw error;
     }
