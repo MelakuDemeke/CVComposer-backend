@@ -52,16 +52,15 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.get("/", (req, res) => {
-    if (mongoose.connection.readyState === 1) {
-        // Connection is open
+app.get("/", async (req, res) => {
+    try {
+        await mongoose.connection.db.admin().ping();
         res.send('Database connected!');
-    } else {
-        // Connection is not open
-        res.send('Error: Unable to connect to the database.');
+    } catch (error) {
+        console.error('Error connecting to the database:', error.message);
+        res.status(500).send(`Error: Unable to connect to the database. ${error.message}`);
     }
 });
-
 app.listen(8800, () => {
     connect();
     console.log("Server is running");
