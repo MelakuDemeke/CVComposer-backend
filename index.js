@@ -48,7 +48,7 @@ app.use((err, req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-    res.send(`the tokenis ${process.env.JWT_SECRET}`);
+    res.send("Hello World");
 });
 
 app.listen(8800, () => {
