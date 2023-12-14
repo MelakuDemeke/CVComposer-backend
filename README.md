@@ -17,9 +17,9 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
 
 #### Register User
 * Endpoint: `http://localhost:8800/api/v1/auth/register`
-* Method: `POST``
-* Description: Register a new user.
-* Body: JSON containing username, email, and password.
+  * Method: `POST``
+  * Description: Register a new user.
+  * Body: JSON containing username, email, and password.
 
 ## contributors
 <a href="https://github.com/MelakuDemeke/CVComposer-backend/graphs/contributors">
