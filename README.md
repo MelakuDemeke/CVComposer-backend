@@ -33,6 +33,14 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
   * Description: Check if a user is an admin.
   * Params: userId (replace with actual user ID).
 
+### User Management
+
+#### Update User
+* Endpoint: http://localhost:8800/api/v1/users/657995219bcdcb1395a336e5
+  * Method: PUT
+  * Description: Update user details, specifically set isAdmin to false.
+  * Body: JSON containing isAdmin field.
+
 ## contributors
 <a href="https://github.com/MelakuDemeke/CVComposer-backend/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=MelakuDemeke/CVComposer-backend" />
