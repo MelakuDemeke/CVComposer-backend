@@ -22,14 +22,14 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
   * Body: JSON containing username, email, and password.
 
 #### Login
-* Endpoint: http://localhost:8800/api/v1/auth/login
-  * Method: POST
+* Endpoint: `http://localhost:8800/api/v1/auth/login`
+  * Method: `POST`
   * Description: Log in a user.
   * Body: JSON containing username and password.
 
 #### Check Authentication
-* Endpoint: http://localhost:8800/api/v1/users/checkadmin/{userId}
-  * Method: GET
+* Endpoint: `http://localhost:8800/api/v1/users/checkadmin/{userId}`
+  * Method:`GET`
   * Description: Check if a user is an admin.
   * Params: userId (replace with actual user ID).
 
