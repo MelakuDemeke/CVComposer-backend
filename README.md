@@ -36,7 +36,7 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
 ### User Management
 
 #### Update User
-* Endpoint: `http://localhost:8800/api/v1/users/657995219bcdcb1395a336e5`
+* Endpoint: `http://localhost:8800/api/v1/users/{userId}`
   * Method: `PUT`
   * Description: Update user details, specifically set isAdmin to false.
   * Body: JSON containing isAdmin field.
