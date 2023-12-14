@@ -27,6 +27,12 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
   * Description: Log in a user.
   * Body: JSON containing username and password.
 
+#### Check Authentication
+* Endpoint: http://localhost:8800/api/v1/users/checkadmin/{userId}
+  * Method: GET
+  * Description: Check if a user is an admin.
+  * Params: userId (replace with actual user ID).
+
 ## contributors
 <a href="https://github.com/MelakuDemeke/CVComposer-backend/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=MelakuDemeke/CVComposer-backend" />
