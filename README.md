@@ -7,3 +7,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/MelakuDemeke/CVComposer-backend?logo=github&style=flat)
 ![GitHub forks](https://img.shields.io/github/forks/MelakuDemeke/CVComposer-backend?logo=github&style=falt)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MelakuDemeke/CVComposer-backend?logo=github)
+
+## Overview
+CVComposer-backend is the backend of the CVComposer project. CVComposer is a web-based platform tailored to assist job seekers in crafting compelling CVs (Curriculum Vitae) and Cover Letters effortlessly. In the backend we also add a method of posting and and getting job postes from the database. The backend is built using Node.js, Express.js, and MongoDB.
+
