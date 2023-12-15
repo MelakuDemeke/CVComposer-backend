@@ -50,8 +50,8 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
   * Body: JSON with job details such as title, company, location, etc.
 
 #### Update Job
-* Endpoint: http://localhost:8800/api/v1/jobs/65785b73e93cf97740b6a5c5
-  * Method: PUT
+* Endpoint: `http://localhost:8800/api/v1/jobs/{JobId}`
+  * Method: `PUT`
   * Description: Update an existing job posting.
   * Body: JSON with updated job details.
 
