@@ -41,6 +41,13 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
   * Description: Update user details, specifically set isAdmin to false.
   * Body: JSON containing isAdmin field.
 
+### Job Management
+#### Create Job
+* Endpoint: `http://localhost:8800/api/v1/jobs`
+  * Method: `POST`
+  * Description: Create a new job posting.
+  * Body: JSON with job details such as title, company, location, etc.
+
 ## contributors
 <a href="https://github.com/MelakuDemeke/CVComposer-backend/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=MelakuDemeke/CVComposer-backend" />
