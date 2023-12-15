@@ -55,6 +55,11 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
   * Description: Update an existing job posting.
   * Body: JSON with updated job details.
 
+#### Get Job
+* Endpoint: `http://localhost:8800/api/v1/jobs/{JobId}`
+  * Method: `GET`
+  * Description: Get details of a specific job.
+
 ## contributors
 <a href="https://github.com/MelakuDemeke/CVComposer-backend/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=MelakuDemeke/CVComposer-backend" />
