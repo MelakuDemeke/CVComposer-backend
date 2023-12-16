@@ -11,13 +11,19 @@
 ## Overview
 CVComposer-backend is the backend of the CVComposer project. CVComposer is a web-based platform tailored to assist job seekers in crafting compelling CVs (Curriculum Vitae) and Cover Letters effortlessly. In the backend we also add a method of posting and and getting job postes from the database. The backend is built using Node.js, Express.js, and MongoDB.
 
+<p align="left"> 
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="bootstrap" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="bootstrap" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="bootstrap" width="40" height="40"/>
+</p>
+
 ## Features
 
 ### user authentication
 
 #### Register User
 * Endpoint: `http://localhost:8800/api/v1/auth/register`
-  * Method: `POST``
+  * Method: `POST`
   * Description: Register a new user.
   * Body: JSON containing username, email, and password.
 
