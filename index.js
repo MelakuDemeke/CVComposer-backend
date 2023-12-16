@@ -16,7 +16,11 @@ const connect = async () => {
         throw error;
     }
 };
-
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+    console.log('Connected to MongoDB');
+});
 mongoose.connection.on("disconnected", () => {
     console.log("Database disconnected");
 });
@@ -59,5 +63,5 @@ app.get("/", (req, res) => {
 
 app.listen(8800, () => {
     connect();
-    console.log("Server is running");
+    console.log("Server is running in port 8800");
 });
