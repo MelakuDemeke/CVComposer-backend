@@ -1,10 +1,13 @@
 import express from "express";
 import { verifyAdmin } from "../utils/verifyToken.js";
-import { createTip } from "../controllers/tips.js";
+import { createTip, updateTip } from "../controllers/tips.js";
 
 const router = express.Router();
 
-//CREATE JOB
+//CREATE Tip
 router.post("/",verifyAdmin, createTip);
+
+//UPDATE Tip
+router.put("/:id",verifyAdmin, updateTip);
 
 export default router;

@@ -9,3 +9,16 @@ export const createTip = async (req, res, next) => {
         next(error)
     }
 };
+
+export const updateTip = async (req, res, next) => {
+    try {
+        const updatedTip = await Tip.findByIdAndUpdate(
+            req.params.id,
+            { $set: req.body },
+            { new: true }
+        );
+        res.status(200).json(updatedTip);
+    } catch (error) {
+        next(error)
+    }
+};
