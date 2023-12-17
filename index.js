@@ -5,6 +5,7 @@ import authRoute from "./routes/auth.js";
 import jobRoute from "./routes/jobs.js";
 import cookieParser from "cookie-parser";
 import usersRoute from "./routes/users.js";
+import tipsRoute from "./routes/tips.js"
 
 const app = express();
 dotenv.config();
@@ -37,6 +38,7 @@ app.use(express.json());
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/jobs", jobRoute);
 app.use("/api/v1/users", usersRoute);
+app.use("/api/v1/tips", tipsRoute);
 
 
 //Error handling middleware
