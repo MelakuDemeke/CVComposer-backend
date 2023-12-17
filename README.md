@@ -71,6 +71,34 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
   * Method: `GET`
   * Description: Get a list of all jobs.
 
+### Tips
+
+#### Get All Tips
+* Endpoint: `GET /api/v1/tips`
+  * Description: Retrieve all tips.
+  * Headers: User-Agent: insomnia/8.4.5
+
+#### Get Tip by ID
+* Endpoint : `GET /api/v1/tips/find/{tipId}`
+- **Description**: Retrieve a specific tip by ID.
+- **Headers**: User-Agent: insomnia/8.4.5
+
+#### Get Tips by Category
+- **Endpoint**: `GET /api/v1/tips/bycategory/?category={category}`
+- **Description**: Retrieve tips based on a specific category.
+- **Headers**: User-Agent: insomnia/8.4.5
+
+#### Create Tip
+- **Endpoint**: `POST /api/v1/tips`
+- **Description**: Create a new tip.
+- **Headers**: Content-Type: application/json, User-Agent: insomnia/8.4.5
+- **Body**:
+  ```json
+  {
+      "title": "CV Writing Tips",
+      "category": "CV",
+      "content": "Highlight your key achievements, use action verbs, and keep your CV concise and well-organized. Tailor it for the specific job you're applying for."
+  }
 ## contributors
 <a href="https://github.com/MelakuDemeke/CVComposer-backend/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=MelakuDemeke/CVComposer-backend" />
