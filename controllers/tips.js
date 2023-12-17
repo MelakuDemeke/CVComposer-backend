@@ -22,3 +22,14 @@ export const updateTip = async (req, res, next) => {
         next(error)
     }
 };
+
+export const deleteTip = async (req, res, next) => {
+    try {
+        await Tip.findByIdAndDelete(
+            req.params.id,
+        );
+        res.status(200).json("Tip has been deleted");
+    } catch (error) {
+        next(error)
+    }
+};
