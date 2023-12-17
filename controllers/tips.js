@@ -33,3 +33,23 @@ export const deleteTip = async (req, res, next) => {
         next(error)
     }
 };
+
+export const getTip = async (req, res, next) => {
+    try {
+        const tip = await Tip.findById(
+            req.params.id,
+        );
+        res.status(200).json(tip);
+    } catch (error) {
+        next(error)
+    }
+};
+
+export const getTips = async (req, res, next) => {
+    try {
+        const tips = await Tip.find();
+        res.status(200).json(tips);
+    } catch (error) {
+        next(error)
+    }
+};
