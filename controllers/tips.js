@@ -45,6 +45,19 @@ export const getTip = async (req, res, next) => {
     }
 };
 
+export const getTipsByCategory = async (req, res, next) => {
+    try {
+        const { category } = req.query;
+        
+        const filter = category ? { category } : {};
+
+        const tips = await Tip.find(filter);
+        res.status(200).json(tips);
+    } catch (error) {
+        next(error);
+    }
+};
+
 export const getTips = async (req, res, next) => {
     try {
         const tips = await Tip.find();
@@ -53,3 +66,4 @@ export const getTips = async (req, res, next) => {
         next(error)
     }
 };
+

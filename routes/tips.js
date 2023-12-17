@@ -1,6 +1,12 @@
 import express from "express";
 import { verifyAdmin } from "../utils/verifyToken.js";
-import { createTip, updateTip, deleteTip, getTip, getTips } from "../controllers/tips.js";
+import {
+    createTip,
+    updateTip,
+    deleteTip,
+    getTip,
+    getTips,
+    getTipsByCategory } from "../controllers/tips.js";
 
 const router = express.Router();
 
@@ -8,16 +14,19 @@ const router = express.Router();
 router.post("/",verifyAdmin, createTip);
 
 //UPDATE Tip
-router.put("/:id",verifyAdmin, updateTip);
+router.put("/find/:id",verifyAdmin, updateTip);
 
 //DELETE Tip
-router.delete("/:id",verifyAdmin, deleteTip);
+router.delete("/find/:id",verifyAdmin, deleteTip);
 
 //GET tip
-router.get("/:id", getTip);
+router.get("/find/:id", getTip);
 
 //GETALL Tips
 router.get("/", getTips);
+
+//GETALL Tips by category
+router.get("/bycategory", getTipsByCategory);
 
 
 export default router;
