@@ -176,6 +176,12 @@ cd path/to/your/project/Test
 cd api
 ```
 
+* Step 3: Retrieve the Backup JSON File
+  * Find and copy the backup JSON file you want to use for testing. Ensure you have the file path for the next steps.
+
+* Step 4: Open Insomnia API Tool
+  * If you don't have Insomnia installed, download and install it from [Insomnia Website](https://insomnia.rest/download). Open Insomnia on your computer.
+
 ## contributors
 <a href="https://github.com/MelakuDemeke/CVComposer/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=MelakuDemeke/CVComposer" />
