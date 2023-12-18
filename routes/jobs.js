@@ -1,5 +1,5 @@
 import express from "express";
-import { createJob, deleteJob, getJob, getJobs, updateJob } from "../controllers/jobs.js";
+import { createJob, deleteJob, getJob, getJobs, getJobsByTitle, updateJob } from "../controllers/jobs.js";
 import { verifyAdmin } from "../utils/verifyToken.js";
 
 const router = express.Router();
@@ -15,5 +15,7 @@ router.delete("/find/:id",verifyAdmin, deleteJob);
 router.get("/find/:id", getJob);
 //GETALL JOB
 router.get("/", getJobs);
+//GETALL Jobs by category
+router.get("/bytitle", getJobsByTitle);
 
 export default router;

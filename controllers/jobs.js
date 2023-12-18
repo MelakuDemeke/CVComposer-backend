@@ -45,6 +45,18 @@ export const getJob = async (req, res, next) => {
     }
 };
 
+export const getJobsByTitle = async (req, res, next) => {
+    try {
+        const { title } = req.query;
+
+        const filter = title ? { title } : {};
+
+        const jobs = await Job.find(filter);
+        res.status(200).json(jobs);
+    } catch (error) {
+        next(error);
+    }
+};
 export const getJobs = async (req, res, next) => {
     try {
         const page = parseInt(req.query.page) || 1;
