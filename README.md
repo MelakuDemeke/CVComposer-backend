@@ -67,9 +67,15 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
   * Description: Get details of a specific job.
 
 #### Get All Jobs
-* Endpoint: `http://localhost:8800/api/v1/jobs`
+* Endpoint: `http://localhost:8800/api/v1/jobs?page=1&resultsPerPage=10`
   * Method: `GET`
   * Description: Get a list of all jobs.
+  * Features: implement pagination
+
+#### Get Job by Category
+* Endpoint: `GET /api/v1/tips/bytitle/?title={title}`
+  * Description: Retrieve tips based on a specific category.
+  * Headers: User-Agent: insomnia/8.4.5
 
 ### Tips
 
