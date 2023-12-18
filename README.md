@@ -84,15 +84,15 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
   * Headers: User-Agent: insomnia/8.4.5
 
 #### Get Tips by Category
-- **Endpoint**: `GET /api/v1/tips/bycategory/?category={category}`
-- **Description**: Retrieve tips based on a specific category.
-- **Headers**: User-Agent: insomnia/8.4.5
+* Endpoint: `GET /api/v1/tips/bycategory/?category={category}`
+  * Description: Retrieve tips based on a specific category.
+  * Headers: User-Agent: insomnia/8.4.5
 
 #### Create Tip
-- **Endpoint**: `POST /api/v1/tips`
-- **Description**: Create a new tip.
-- **Headers**: Content-Type: application/json, User-Agent: insomnia/8.4.5
-- **Body**:
+* Endpoint**: `POST /api/v1/tips`
+  * Description: Create a new tip.
+  * Headers: Content-Type: application/json, User-Agent: insomnia/8.4.5
+  * Body:
   ```json
   {
       "title": "CV Writing Tips",
