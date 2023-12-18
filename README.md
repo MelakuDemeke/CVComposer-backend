@@ -128,6 +128,37 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
       "category": "CV",
       "content": "Highlight your key achievements, use action verbs, and keep your CV concise and well-organized. Tailor it for the specific job you're applying for."
   }
+
+## Installation
+
+To run the CVComposer-backend locally for development or testing purposes, follow these steps:
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/MelakuDemeke/CVComposer-backend.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd CVComposer-backend
+   ```
+
+3. Install the required dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+
+
 ## contributors
 <a href="https://github.com/MelakuDemeke/CVComposer/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=MelakuDemeke/CVComposer" />
