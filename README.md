@@ -196,7 +196,10 @@ Now that you've imported the data, you can start experimenting with your API req
   * Execute the requests to interact with your API.
 Remember to save your changes in Insomnia as needed.
 
-Happy experimenting!
+Happy experimenting! Here is Samples
+![1](img/1.png)
+![2](img/2.png)
+![3](img/3.png)
 
 ## contributors
 <a href="https://github.com/MelakuDemeke/CVComposer/graphs/contributors">
