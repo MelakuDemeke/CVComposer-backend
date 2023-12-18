@@ -8,7 +8,7 @@ const router = express.Router();
 router.post("/",verifyAdmin, createJob);
 
 //UPDATE JOB
-router.put("/:id",verifyAdmin, updateJob);
+router.put("/find/:id",verifyAdmin, updateJob);
 //DELETE JOB
 router.delete("/:id",verifyAdmin, deleteJob);
 //GET JOB
