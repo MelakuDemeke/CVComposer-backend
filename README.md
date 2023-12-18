@@ -1,8 +1,5 @@
 # CVComposer-backend
 
-## A backend for cv composer.
-=======
-
 ![banner](img/cvcomposerheadimg.png)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/MelakuDemeke/CVComposer-backend)
