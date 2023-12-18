@@ -80,8 +80,8 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
 
 #### Get Tip by ID
 * Endpoint : `GET /api/v1/tips/find/{tipId}`
-- **Description**: Retrieve a specific tip by ID.
-- **Headers**: User-Agent: insomnia/8.4.5
+  * Description: Retrieve a specific tip by ID.
+  * Headers: User-Agent: insomnia/8.4.5
 
 #### Get Tips by Category
 - **Endpoint**: `GET /api/v1/tips/bycategory/?category={category}`
