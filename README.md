@@ -37,6 +37,7 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
       - [Get Tip by ID](#get-tip-by-id)
       - [Get Tips by Category](#get-tips-by-category)
       - [Create Tip](#create-tip)
+  - [Usage](#usage)
   - [contributors](#contributors)
 
 ## Features
@@ -156,8 +157,24 @@ To run the CVComposer-backend locally for development or testing purposes, follo
    ```bash
    npm run dev
    ```
+5. Open your API tester and start expermenting the API
 
+## Usage
+Usage Guide for Experimenting with API Data in Insomnia
 
+* Step 1: Navigate to the Test Folder
+  * Open your project directory and locate the "Test" folder.
+
+```bash
+cd path/to/your/project/Test
+```
+
+* Step 2: Access the API Folder
+  * Navigate into the "api" subfolder within the "Test" directory.
+
+```bash
+cd api
+```
 
 ## contributors
 <a href="https://github.com/MelakuDemeke/CVComposer/graphs/contributors">
