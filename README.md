@@ -17,6 +17,28 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="bootstrap" width="40" height="40"/>
 </p>
 
+- [CVComposer-backend](#cvcomposer-backend)
+  - [Overview](#overview)
+  - [Features](#features)
+    - [user authentication](#user-authentication)
+      - [Register User](#register-user)
+      - [Login](#login)
+      - [Check Authentication](#check-authentication)
+    - [User Management](#user-management)
+      - [Update User](#update-user)
+    - [Job Management](#job-management)
+      - [Create Job](#create-job)
+      - [Update Job](#update-job)
+      - [Get Job](#get-job)
+      - [Get All Jobs](#get-all-jobs)
+      - [Get Job by Category](#get-job-by-category)
+    - [Tips](#tips)
+      - [Get All Tips](#get-all-tips)
+      - [Get Tip by ID](#get-tip-by-id)
+      - [Get Tips by Category](#get-tips-by-category)
+      - [Create Tip](#create-tip)
+  - [contributors](#contributors)
+
 ## Features
 
 ### user authentication
