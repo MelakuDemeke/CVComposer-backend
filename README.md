@@ -74,9 +74,10 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
 ### Tips
 
 #### Get All Tips
-* Endpoint: `GET /api/v1/tips`
+* Endpoint: `GET /api/v1/tips?page=1&resultsPerPage=10`
   * Description: Retrieve all tips.
   * Headers: User-Agent: insomnia/8.4.5
+  * Features: also implement pagination
 
 #### Get Tip by ID
 * Endpoint : `GET /api/v1/tips/find/{tipId}`
