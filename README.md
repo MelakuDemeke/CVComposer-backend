@@ -100,6 +100,9 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
       "content": "Highlight your key achievements, use action verbs, and keep your CV concise and well-organized. Tailor it for the specific job you're applying for."
   }
 ## contributors
-<a href="https://github.com/MelakuDemeke/CVComposer-backend/graphs/contributors">
+<a href="https://github.com/MelakuDemeke">
   <img src="https://contrib.rocks/image?repo=MelakuDemeke/CVComposer-backend" />
+</a>
+<a href="https://github.com/MulukenMathewos">
+  <img src="https://contrib.rocks/image?repo=MulukenMathewos/alx-backend" />
 </a>
