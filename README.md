@@ -1,4 +1,5 @@
 # CVComposer-backend
+
 A backend for cv composer.
 =======
 
@@ -106,5 +107,5 @@ CVComposer-backend is the backend of the CVComposer project. CVComposer is a web
   <img src="https://contrib.rocks/image?repo=MelakuDemeke/CVComposer-backend" />
 </a>
 <a href="https://github.com/MulukenMathewos">
-  <img src="https://contrib.rocks/image?repo=MelakuDemeke/CVComposer-backend" />
+  <img src="https://contrib.rocks/image?repo=MulukenMathewos/alx-backend" />
 </a>
