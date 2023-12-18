@@ -10,9 +10,9 @@ router.post("/",verifyAdmin, createJob);
 //UPDATE JOB
 router.put("/find/:id",verifyAdmin, updateJob);
 //DELETE JOB
-router.delete("/:id",verifyAdmin, deleteJob);
+router.delete("/find/:id",verifyAdmin, deleteJob);
 //GET JOB
-router.get("/:id", getJob);
+router.get("/find/:id", getJob);
 //GETALL JOB
 router.get("/", getJobs);
 
