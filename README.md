@@ -182,6 +182,22 @@ cd api
 * Step 4: Open Insomnia API Tool
   * If you don't have Insomnia installed, download and install it from [Insomnia Website](https://insomnia.rest/download). Open Insomnia on your computer.
 
+* Step 5: Import Data into Insomnia
+  1. In Insomnia, click on the "Import/Export" option in the top-left corner.
+  2. Select "Import Data".
+  3. Choose the "From File" option.
+  4. Navigate to the location where you saved the backup JSON file and select it.
+
+* Step 6: Start Experimenting
+Now that you've imported the data, you can start experimenting with your API requests.
+
+  * Explore the imported requests in the sidebar.
+  * Modify request parameters as needed.
+  * Execute the requests to interact with your API.
+Remember to save your changes in Insomnia as needed.
+
+Happy experimenting!
+
 ## contributors
 <a href="https://github.com/MelakuDemeke/CVComposer/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=MelakuDemeke/CVComposer" />
