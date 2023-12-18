@@ -60,10 +60,28 @@ export const getTipsByCategory = async (req, res, next) => {
 
 export const getTips = async (req, res, next) => {
     try {
-        const tips = await Tip.find();
-        res.status(200).json(tips);
+        const page = parseInt(req.query.page) || 1;
+        const resultsPerPage = parseInt(req.query.resultsPerPage) || 10;
+
+        const skip = (page - 1) * resultsPerPage;
+
+        const tips = await Tip.find().skip(skip).limit(resultsPerPage);
+
+        const totalTips = await Tip.countDocuments();
+
+        const totalPages = Math.ceil(totalTips / resultsPerPage);
+
+        const nextPage = page < totalPages ? `/api/v1/tips?page=${page + 1}&resultsPerPage=${resultsPerPage}` : null;
+        const prevPage = page > 1 ? `/api/v1/tips?page=${page - 1}&resultsPerPage=${resultsPerPage}` : null;
+
+        res.status(200).json({
+            tips,
+            nextPage,
+            prevPage,
+            totalPages,
+            currentPage: page
+        });
     } catch (error) {
-        next(error)
+        next(error);
     }
 };
-
