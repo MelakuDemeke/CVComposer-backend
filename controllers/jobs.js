@@ -47,9 +47,28 @@ export const getJob = async (req, res, next) => {
 
 export const getJobs = async (req, res, next) => {
     try {
-        const jobs = await Job.find();
-        res.status(200).json(jobs);
+        const page = parseInt(req.query.page) || 1;
+        const resultsPerPage = parseInt(req.query.resultsPerPage) || 10;
+
+        const skip = (page - 1) * resultsPerPage;
+
+        const jobs = await Job.find().skip(skip).limit(resultsPerPage);
+
+        const totalJobs = await Job.countDocuments();
+
+        const totalPages = Math.ceil(totalJobs / resultsPerPage);
+
+        const nextPage = page < totalPages ? `/api/v1/jobs?page=${page + 1}&resultsPerPage=${resultsPerPage}` : null;
+        const prevPage = page > 1 ? `/api/v1/jobs?page=${page - 1}&resultsPerPage=${resultsPerPage}` : null;
+
+        res.status(200).json({
+            jobs,
+            nextPage,
+            prevPage,
+            totalPages,
+            currentPage: page
+        });
     } catch (error) {
-        next(error)
+        next(error);
     }
 };
