@@ -12,7 +12,7 @@ dotenv.config();
 
 const connect = async () => {
     try {
-        await mongoose.connect("mongodb+srv://Melaku:32587test@cluster0.br1rbpb.mongodb.net/cvcomposer?retryWrites=true&w=majority");
+        await mongoose.connect();
     } catch (error) {
         throw error;
     }
